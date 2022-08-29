@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+  }
+  
+  body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 30px;
+    color: #777;
+    background:rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    max-height: fit-content;
+    max-width: 450px;
+    width: 100%;
+    background: #F9F9F9;
+    position: relative;
+    border-radius: 6px;
+    margin: 150px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    cursor:pointer;
+    z-index: 10000;
+  }
+
+  .container:hover{
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .header{
+    content:"";
+    background:linear-gradient(to right,rgb(231,100,139)20% ,rgb(255,130,154));
+    height:60px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+  .container__title{
+    font-size:20px;
+    font-weight: 500;
+    text-align: center;
+    color:black;
+    margin-bottom: 12px;
+  }
+
+  .input-button{
+    display: flex;
+    padding:10px 25px 0px 25px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .input-button__wrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .input-button__radio{
+    width:14px;
+    cursor: pointer;
+  }
+
+  .input-button__text{
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+
+  .input-button__text:hover{
+    color:rgba(0, 0, 0, 0.8)
+  }
+  
+  .Text-Box__input-box {
+    font: 400 13px/16px "Roboto", Helvetica;
+  }
+  
+  .Text-Box {
+    background: #F9F9F9;
+    padding: 25px;
+  }
+  
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .Text-Box__input-box {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+  }
+  
+  .Text-Box__input-box:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+  }
+  
+  .Text-Box__input-box--Text-box {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+  }
+
+  .checkbox-container{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .checkbox-container-wrapper{
+    margin-bottom: 7px;
+  }
+
+  .checkbox-container__checkbox{
+    width:13px;
+    cursor: pointer;
+  }
+
+
+  .Text-Box button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+  }
+  
+  .Text-Box button[type="submit"]:hover {
+    background: #43A047;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .Text-Box button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .Text-Box__input-box:focus {
+    outline: 0;
+    border: 1px solid #aaa;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #888;
+  }
+
+  .footer-text{
+    line-height: 26px;
+  }
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .footer__button{
+    cursor: pointer;
+    font-size:15px;
+    font-weight:400;
+    padding:13px 25px;
+    border-radius: 4px;
+    border:none;
+  }
+
+  .footer__button--cancel{
+    color:rgba(0, 0, 0, 0.8);
+    background-color: rgba(211,211,211,.4);
+    border-radius:0px 6px 0px 4px;
+  }
+
+  .footer__button--send{
+    width:40%;
+    background: linear-gradient(to right,rgba(231,100,139)20% ,rgba(255,130,154));
+    opacity: 0.9;
+    color:black;
+    border-radius: 7px 0px 7px 0px;
+    transition: all 0.3s ease-in;
+  }
+  
+  .footer__button--send:hover{
+    background: linear-gradient(to right,rgba(231,100,139)20% ,rgba(255,130,154));
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+  }
