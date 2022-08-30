@@ -15,7 +15,7 @@
         <script src="https://kit.fontawesome.com/f07c32b88e.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="container">  
+        <div class="feedback-container">  
             <div class="header">
                 <h2 class="container__title">Share your feedback</h2>
             </div>
@@ -84,70 +84,20 @@
 
           <div id="chat">
             <a  class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
-                <i class="fa fa-comments">
+                <i class="fa fa-comments chat-icon">
                     <div class="Tooltip-box">
                         <p class="Tooltip-box__text">Leave a feedback</p>
                     </div>
                 </i>
-                <i class="fa fa-times">
+                <i class="fa fa-times cancel-icon">
                     <div class="Tooltip-box Tooltip-box--2">
                         <p class="Tooltip-box__text">Cancel</p>
                     </div>
                 </i>
             </a>
-            
-
-            
+ 
         </div>
 
-        
-        <script  type="text/javascript">
-
-const textWrapper = document.getElementById("contact")
-
-textWrapper.style.display = "none";
-
-const container = document.querySelector('.container');
-
-container.style.display = "none"
-
-
-jQuery(function($){
-    $('.footer__button--cancel').click(function (){
-        // $('.container').delay(250).fadeOut();
-        // $('.container').hide(170)
-        $('.container').slideUp(300)
-    })
-})
-
-jQuery(function ($) {
-    $('.input-button__radio').click(function (){
-        if($ ('.input-button__radio').hasClass('active')){
-            $('.input-button__radio').removeClass('active');
-            $('.Text-Box').hide(100);
-        } else {
-            $('.input-button__radio').addClass('active');
-            $('.Text-Box').show(100)
-        }
-    })
-})
-
-jQuery(function ($) {
-    $('.messenger').click(function () {
-        if($('.container').hasClass('active')){
-            $('.container').removeClass('active');
-            $('i.fa-times').hide();
-            $('i.fa-comments').show();
-            $('.container').delay(100).fadeOut();
-        }  
-        else {
-            $('.container').addClass('active');
-            $('i.fa-comments').hide();
-            $('.container').delay(100).fadeIn();
-            $('i.fa-times').delay(50).fadeIn();
-        }
-    })
-})
-        </script>
+        <script src="./index.js" type="text/javascript"></script>
     </body>
 </html>
