@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./index.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/f07c32b88e.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -101,6 +101,50 @@
         </div>
 
         
-        <script src="./index.js" async defer></script>
+        <script  type="text/javascript">
+
+const textWrapper = document.getElementById("contact")
+
+
+textWrapper.style.display = "none"
+
+
+jQuery(function($){
+    $('.footer__button--cancel').click(function (){
+        // $('.container').delay(250).fadeOut();
+        // $('.container').hide(170)
+        $('.container').slideUp(300)
+    })
+})
+
+jQuery(function ($) {
+    $('.input-button__radio').click(function (){
+        if($ ('.input-button__radio').hasClass('active')){
+            $('.input-button__radio').removeClass('active');
+            $('.Text-Box').hide(100);
+        } else {
+            $('.input-button__radio').addClass('active');
+            $('.Text-Box').show(100)
+        }
+    })
+})
+
+jQuery(function ($) {
+    $('.messenger').click(function () {
+        if($('.container').hasClass('active')){
+            $('.container').removeClass('active');
+            $('i.fa-times').hide();
+            $('i.fa-comments').show();
+            $('.container').delay(100).fadeOut();
+        }  
+        else {
+            $('.container').addClass('active');
+            $('i.fa-comments').hide();
+            $('.container').delay(100).fadeIn();
+            $('i.fa-times').delay(50).fadeIn();
+        }
+    })
+})
+        </script>
     </body>
 </html>
