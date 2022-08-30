@@ -17,7 +17,7 @@ jQuery(function($){
 jQuery(function ($) {
     $('.input-button__radio').click(function (){
         if($ ('.input-button__radio').hasClass('active')){
-            // $('.input-button__radio').removeClass('active');
+            $('.input-button__radio').removeClass('active');
             // $('.Text-Box').hide(100);
         } else {
             $('.input-button__radio').addClass('active');
