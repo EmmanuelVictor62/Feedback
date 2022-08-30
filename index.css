@@ -19,7 +19,7 @@
   
   .container {
     max-height: fit-content;
-    max-width: 450px;
+    max-width: 470px;
     width: 100%;
     background: #F9F9F9;
     position: relative;
@@ -41,14 +41,24 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
   }
 
   .container__title{
     font-size:20px;
     font-weight: 500;
-    text-align: center;
+    text-align: start;
     color:black;
-    margin-bottom: 12px;
+    margin-left: 22px;
+  }
+
+  .hidden {
+    display: none;
+  }
+  
+  .visuallyhidden {
+    opacity: 0;
   }
 
   .input-button{
@@ -68,6 +78,7 @@
   .input-button__radio{
     width:14px;
     cursor: pointer;
+    accent-color: rgb(231,100,139);
   }
 
   .input-button__text{
@@ -86,7 +97,7 @@
   
   .Text-Box {
     background: #F9F9F9;
-    padding: 25px;
+    padding: 25px 25px 0px 25px;
   }
   
   fieldset {
@@ -131,27 +142,11 @@
   .checkbox-container__checkbox{
     width:13px;
     cursor: pointer;
+    accent-color: rgb(231,100,139);
   }
 
-
-  .Text-Box button[type="submit"] {
+  .checkbox-container__text{
     cursor: pointer;
-    width: 100%;
-    border: none;
-    background: #4CAF50;
-    color: #FFF;
-    margin: 0 0 5px;
-    padding: 10px;
-    font-size: 15px;
-  }
-  
-  .Text-Box button[type="submit"]:hover {
-    background: #43A047;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .Text-Box button[type="submit"]:active {
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
   }
   
   .Text-Box__input-box:focus {
@@ -170,7 +165,9 @@
   .footer{
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 27px;
+    margin-bottom: 20px;
+    padding:0px 25px;
   }
 
   .footer__button{
@@ -186,6 +183,14 @@
     color:rgba(0, 0, 0, 0.8);
     background-color: rgba(211,211,211,.4);
     border-radius:0px 6px 0px 4px;
+    transition: all 0.3s ease-in;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  .footer__button--cancel:hover{
+    color:black;
+    background-color: rgba(211,211,211,.6);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   }
 
   .footer__button--send{
@@ -194,11 +199,155 @@
     opacity: 0.9;
     color:black;
     border-radius: 7px 0px 7px 0px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease-in;
   }
   
   .footer__button--send:hover{
-    background: linear-gradient(to right,rgba(231,100,139)20% ,rgba(255,130,154));
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    /* background: linear-gradient(to right,rgba(231,100,139)20% ,rgba(255,130,154)); */
+    background-color: #F47E26;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
     opacity: 1;
   }
+
+
+  #chat{
+    position:fixed;
+    bottom: 50px;
+    right:50px;
+    cursor: pointer;
+    z-index: 3000000;
+  }
+
+  .messenger{
+    text-decoration: none;
+    height: fit-content;
+    width: fit-content;
+  }
+
+ .fa::before{
+    font-size: 24px;
+    color:white;
+    background-color: rgb(242,114,145);
+    height:55px;
+    width:55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px -2px #000;
+    position:relative
+ }
+
+ i.fa-times{
+    display:none
+ }
+
+.Tooltip-box {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  #chat:hover .Tooltip-box{
+    opacity: 1;
+  }
+  
+
+.Tooltip-box{
+    padding:5px 17px;
+    background-color:black;
+    font-size: 15px;
+    color:white;
+    border-radius: 6px;
+    position: absolute;
+    width:156px;
+    height:40px;
+    top:10px;
+    left:-160px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.Tooltip-box__text{
+    font-size: 15px;
+    font-weight:400;
+    font-family: sans-serif;
+}
+
+.Tooltip-box::after{
+    content: " ";
+  position: absolute;
+  top: 32%;
+  left: 100%; /* To the right of the tooltip */
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+
+
+@media (max-width:767px){
+    .container{
+       margin: 150px 0px 150px 0px;
+       width: 90%;
+       box-shadow: 0px 0px 16px rgba(0,0,0,.7);
+    }
+
+    .header{
+        margin-bottom: 15px;
+    }
+
+    .container__title{
+        font-size: 18px;
+    }
+
+    .input-button{
+        padding:0px 20px;
+    }
+
+    .input-button__radio{
+        width:12px;
+    }
+
+    .Text-Box{
+        padding:20px 20px 0px 20px;
+    }
+
+    .checkbox-container-wrapper{
+        flex-direction: column;
+        display: flex;
+        row-gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .checkbox-container__checkbox{
+       width:12px;
+    }
+    .checkbox-container__text{
+        line-height: 20px;
+    }
+
+    .footer-text{
+        line-height: 22px;
+    }
+
+    .footer{
+        margin-top: 15px;
+    }
+
+    .footer__button{
+        width:40%;
+        font-size: 12px;
+        white-space: nowrap;
+        padding:10px 20px;
+    }
+
+    .fa-times > .Tooltip-box{
+        width:fit-content
+    }
+
+    .Tooltip-box--2{
+        left:-80px;
+    }
+}

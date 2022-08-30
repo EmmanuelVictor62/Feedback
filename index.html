@@ -11,27 +11,31 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./index.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://kit.fontawesome.com/f07c32b88e.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">  
-            <div class="header"></div>
+            <div class="header">
+                <h2 class="container__title">Share your feedback</h2>
+            </div>
 
-            <h2 class="container__title">Share your feedback</h2>
+            
 
             <div class="input-button">
                 <div class="input-button__wrapper">
-                    <input id="radio1" type="radio" name="input-text" class="input-button__radio" value="Suggestion" onclick="radio()">
-                    <label for="Suggestion" class="input-button__text">Suggestion</label>
+                    <input id="radio1" type="radio" name="input-text" class="input-button__radio" value="Suggestion" >
+                    <label for="radio1" class="input-button__text">Suggestion</label>
                 </div>
 
                 <div class="input-button__wrapper">
-                    <input id="radio2" type="radio" name="input-text" class="input-button__radio" value="Problem" onclick="radio()">
-                    <label for="Problem" class="input-button__text">Problem</label>
+                    <input id="radio2" type="radio" name="input-text" class="input-button__radio" value="Problem" >
+                    <label for="radio2" class="input-button__text">Problem</label>
                 </div>
 
                 <div class="input-button__wrapper">
-                    <input id="radio3" type="radio" name="input-text" class="input-button__radio" value="Contact Me" onclick="radio()">
-                    <label for="Contact Me" class="input-button__text">Contact Me</label>
+                    <input id="radio3" type="radio" name="input-text" class="input-button__radio" value="Contact Me" >
+                    <label for="radio3" class="input-button__text">Contact Me</label>
                 </div>
             </div>
 
@@ -49,35 +53,53 @@
               <fieldset>
                 <textarea placeholder="Type your message here...." tabindex="5" class="Text-Box__input-box Text-Box__input-box--Text-box"></textarea>
               </fieldset>
-              <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-              </fieldset>
 
               <div class="checkbox-container-wrapper">
                 <div class="checkbox-container">
-                    <input type="checkbox" class="checkbox-container__checkbox">
-                    <p class="checkbox-container__text">Curator Video Research can contact me about this feedack</p>
+                    <input type="checkbox" class="checkbox-container__checkbox" id="checkbox-1">
+                    <label for="checkbox-1" class="checkbox-container__text">Curator Video Research can contact me about this feedack</label>
                 </div>
                 
                 <div class="checkbox-container">
-                    <input type="checkbox"class="checkbox-container__checkbox">
-                    <p class="checkbox-container__text">I'd like to participate in product research</p>
+                    <input type="checkbox"class="checkbox-container__checkbox" id="checkbox-2">
+                    <label for="checkbox-2" class="checkbox-container__text">I'd like to participate in product research</label>
                 </div>
               </div>
 
               <p class="footer-text">
                 If this issue is urgent contact your Curator Customer
-                Success Contactor or call us during US eastern business hours <br>+1 513 842 6340
+                Success Contactor or call us during US eastern business hours +1 513 842 6340
               </p>
 
-              <div class="footer">
+            </form>
+
+            <div class="footer">
                 <button class="footer__button footer__button--cancel" onclick="cancel()">Cancel</button>
                 <button name="submit" class="footer__button footer__button--send" onclick="Send()">Send feedack</button>
               </div>
 
-            </form>
 
           </div>
+
+
+          <div id="chat" onclick=>
+            <a  class="messenger" data-tooltip="Livechat" data-placement="left" target="_blank">
+                <i class="fa fa-comments">
+                    <div class="Tooltip-box">
+                        <p class="Tooltip-box__text">Leave a feedback</p>
+                    </div>
+                </i>
+                <i class="fa fa-times">
+                    <div class="Tooltip-box Tooltip-box--2">
+                        <p class="Tooltip-box__text">Cancel</p>
+                    </div>
+                </i>
+            </a>
+            
+
+            
+        </div>
+
         
         <script src="./index.js" async defer></script>
     </body>
