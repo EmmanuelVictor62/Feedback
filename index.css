@@ -227,7 +227,7 @@
     width: fit-content;
   }
 
- .fa::before{
+ .chat-icon::before, .cancel-icon::before{
     font-size: 24px;
     color:white;
     background-color: rgb(242,114,145);

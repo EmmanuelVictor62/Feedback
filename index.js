@@ -10,7 +10,9 @@ container.style.display = "none"
 
 jQuery(function($){
     $('.footer__button--cancel').click(function (){
-        $('.feedback-container').slideUp(300)
+        $('.feedback-container').slideUp(300);
+        $('.chat-icon').show(600);
+        $('.cancel-icon').hide();
     })
 })
 
